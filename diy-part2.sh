@@ -17,3 +17,6 @@ git clone https://github.com/halldong/luci-app-speederv2 package/luci-app-speede
 
 #Udp2raw for luci
 git clone https://github.com/sensec/luci-app-udp2raw package/luci-app-udp2raw
+
+#Kcptun for luci
+git clone https://github.com/kuoruan/luci-app-kcptun.git package/luci-app-kcptun
