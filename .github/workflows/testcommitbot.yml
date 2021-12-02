@@ -24,7 +24,7 @@ jobs:
       with:
          add: '.config'
          author_name: ConfigMaker
-         cwd: '../'
+         cwd: './Openwrt/Openwrt/'
          message: 'Updated By Bot'
 
 
