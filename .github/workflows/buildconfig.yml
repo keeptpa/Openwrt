@@ -77,7 +77,7 @@ jobs:
         
     - uses: actions/checkout@v2
       with:
-          path: './OpenwrtAct'
+          path: './OpenwrtAct/'
 
       # You can make whatever type of change to the repo...
     - run: mv .config ./OpenwrtAct/
@@ -87,7 +87,7 @@ jobs:
       with:
         message: 'Setup config and commit'
         add: '.config --force'
-        cwd: './OpenwrtAct'
+        cwd: './OpenwrtAct/'
 
 
         
