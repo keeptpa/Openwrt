@@ -23,7 +23,7 @@ jobs:
       with:
          add: '.config'
          author_name: ConfigMaker
-         cwd: './'
+         cwd: '../'
          message: 'Updated By Bot'
 
 
