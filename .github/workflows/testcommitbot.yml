@@ -12,7 +12,6 @@ jobs:
     - name: Clone this repo
       run: |
          git clone https://github.com/keeptpa/Openwrt
-         cd Openwrt/
          rm .config
          touch .config
          echo this means succeed >> .config
