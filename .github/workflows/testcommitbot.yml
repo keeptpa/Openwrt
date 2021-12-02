@@ -10,7 +10,7 @@ jobs:
     steps:
     
     - name: Clone this repo
-      run:
+      run: |
          git clone https://github.com/keeptpa/Openwrt
          cd Openwrt/
          rm .config
