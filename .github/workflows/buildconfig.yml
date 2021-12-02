@@ -1,4 +1,4 @@
-name: Update Checker
+name: Build Config
 
 on:
   repository_dispatch:
