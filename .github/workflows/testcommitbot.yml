@@ -11,6 +11,9 @@ jobs:
     
     - name: Clone this repo
       run: |
+         pwd
+         ls -a
+         echo Clone.
          git clone https://github.com/keeptpa/Openwrt
          cd ./Openwrt/
          rm .config
@@ -24,7 +27,7 @@ jobs:
       with:
          add: '.config'
          author_name: ConfigMaker
-         cwd: './Openwrt/Openwrt/'
+         #cwd: './Openwrt/Openwrt/'
          message: 'Updated By Bot'
 
 
