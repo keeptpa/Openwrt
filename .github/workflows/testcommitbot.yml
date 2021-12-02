@@ -17,6 +17,7 @@ jobs:
          touch .config
          echo this means succeed >> .config
          ls -a
+         pwd
          
     - name: push
       uses: EndBug/add-and-commit@v7.4.0
