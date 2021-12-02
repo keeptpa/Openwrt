@@ -1,3 +1,12 @@
+**Action2.0**
+
+Sep two workflow.
+One is for config maker.
+One is for complier.
+
+
+---
+
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 # Actions-OpenWrt
