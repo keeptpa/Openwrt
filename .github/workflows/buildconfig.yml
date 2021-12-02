@@ -75,19 +75,20 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         
-    - name: Clone this repo to replace .config
-      run:  
-        git clone https://github.com/keeptpa/Openwrt
-        mv ./.config Openwrt/
-        cd Openwrt
-        
-    - name: push .config file.
-      uses: EndBug/add-and-commit@v7.4.0
+    - uses: actions/checkout@v2
       with:
-        add: 'src'
-        author_name: ConfigMaker
-        cwd: './path/to/the/repo'
-//???
+          path: './OpenwrtAct'
+
+      # You can make whatever type of change to the repo...
+    - run: mv .config ./OpenwrtAct/
+
+      # ...and then use the action as you would normally do, but providing the path to the repo
+    - uses: EndBug/add-and-commit@v7
+      with:
+        message: 'Setup config and commit'
+        add: '.config --force'
+        cwd: './OpenwrtAct'
+
 
         
     - name: Trigger build
