@@ -12,7 +12,8 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-#git clone https://github.com/halldong/luci-app-speederv2 package/luci-app-speederv2
+#Udp speeder v2 for luci
+git clone https://github.com/halldong/luci-app-speederv2 package/luci-app-speederv2
 
 #Udp2raw for luci
 git clone https://github.com/sensec/luci-app-udp2raw package/luci-app-udp2raw
