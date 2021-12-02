@@ -12,16 +12,17 @@ jobs:
     - name: Clone this repo
       run: |
          git clone https://github.com/keeptpa/Openwrt
+         cd ./Openwrt/
          rm .config
          touch .config
          echo this means succeed >> .config
-         ls
          
     - name: push
       uses: EndBug/add-and-commit@v7.4.0
       with:
          add: '.config'
          author_name: ConfigMaker
+         cwd: './'
          message: 'Updated By Bot'
 
 
