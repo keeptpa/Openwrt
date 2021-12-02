@@ -4,31 +4,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-    
+  run:
+    name: Add a text file
+    runs-on: ubuntu-latest
+
     steps:
-    
-    - name: Clone this repo
-      run: |
-         pwd
-         ls -a
-         echo Clone.
-         git clone https://github.com/keeptpa/Openwrt
-         cd ./Openwrt/
-         rm .config
-         touch .config
-         echo this means succeed >> .config
-         ls -a
-         pwd
-         
-    - name: push
-      uses: EndBug/add-and-commit@v7.4.0
-      with:
-         add: '.config'
-         #author_name: ConfigMaker
-         cwd: '/home/runner/work/Openwrt/Openwrt/Openwrt'
-         message: 'Updated By Bot'
+      # If you need to, you can check out your repo to a different location
+      - uses: actions/checkout@v2
+        with:
+          path: './'
+
+      # You can make whatever type of change to the repo...
+      - run: echo "123" > ./.config
+
+      # ...and then use the action as you would normally do, but providing the path to the repo
+      - uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Add the very useful text file'
+          add: '.config --force'
+          cwd: './'
+
 
 
 
