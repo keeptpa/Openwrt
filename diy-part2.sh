@@ -21,5 +21,8 @@ git clone https://github.com/sensec/luci-app-udp2raw package/luci-app-udp2raw
 #Kcptun for luci
 git clone https://github.com/kuoruan/luci-app-kcptun.git package/luci-app-kcptun
 
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 #Chmod for files
 chmod -R 777 files
