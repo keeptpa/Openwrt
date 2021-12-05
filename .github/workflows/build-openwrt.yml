@@ -19,7 +19,7 @@ on:
 
 
 env:
-  REPO_URL: https://github.com/LubanCat/DoorNet-OpenWrt
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
